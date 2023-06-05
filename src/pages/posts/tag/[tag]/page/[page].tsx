@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       UpperCaseCurrentTag,
       allTags,
     },
-    revalidate: 60 * 60 * 3,
+    revalidate: 10,
   };
 };
 
@@ -67,11 +67,11 @@ const BlogTagPageLists = ({
 }) => {
   return (
     <div className="container mx-auto px-4">
-      <title>Notion-Blog</title>
+      <title>Study-Card</title>
       <main className="mt-16">
-        <h1 className="text-5xl font-medium text-center mb-16">Notion Blog</h1>
+        <h1 className="text-5xl font-medium text-center mb-16">Study-Card</h1>
         <p className="text-center text-gray-600 mb-8">
-          NotionからBlogを作成するwebサイト開発
+          Learning programming for each card.
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post: any) => (

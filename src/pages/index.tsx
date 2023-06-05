@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
       topPosts,
       allTags,
     },
-    revalidate: 60 * 60 * 3,
+    revalidate: 10,
   };
 };
 
@@ -26,11 +26,11 @@ export default function Home({
 }) {
   return (
     <div className="container mx-auto px-4">
-      <title>Notion-Study</title>
+      <title>Study-Card</title>
       <main className="mt-16">
         <h1 className="text-5xl font-medium text-center mb-16">Study Blog</h1>
         <p className="text-center text-gray-600 mb-8">
-          モダンフロントエンドについて学ぶ
+          Learning programming for each card.
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {topPosts.map((post: any) => (
