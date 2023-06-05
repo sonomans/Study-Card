@@ -48,11 +48,10 @@ const Post = ({ post }: any) => {
       <div className="mt-30 font-medium">
         <ReactMarkdown
           components={{
-            code({ node, inline, className, children, ...props }) {
+            code({ inline, className, children }) {
               const match = /language-(\w+)/.exec(className || "");
               return !inline && match ? (
                 <SyntaxHighlighter
-                  {...props}
                   style={vscDarkPlus}
                   language={match[1]}
                   PreTag="div"
@@ -65,10 +64,11 @@ const Post = ({ post }: any) => {
             },
           }}
         >
-          {post.markdown}
+          {post.markdown.parent}
         </ReactMarkdown>
       </div>
     </section>
   );
 };
+
 export default Post;
