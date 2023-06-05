@@ -24,12 +24,9 @@ const SinglePost = (props: Props) => {
             <div className="text-gray-400">{date}</div>
           </div>
           <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag: string) => (
-              <Link href={`/posts/tag/${tag}/page/1`}>
-                <span
-                  key={tag}
-                  className="text-sm bg-blue-500 rounded-full px-3 py-1 font-medium"
-                >
+            {tags.map((tag: string, index: number) => (
+              <Link href={`/posts/tag/${tag}/page/1`} key={index}>
+                <span className="text-sm bg-blue-500 rounded-full px-3 py-1 font-medium">
                   {tag}
                 </span>
               </Link>
@@ -46,12 +43,9 @@ const SinglePost = (props: Props) => {
             <div className="text-gray-400">{date}</div>
           </div>
           <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag) => (
-              <Link href={`/posts/tag/${tag}/page/1`}>
-                <span
-                  key={tag}
-                  className="text-sm bg-blue-500 rounded-full px-3 py-1 font-medium"
-                >
+            {tags.map((tag: string, index: number) => (
+              <Link href={`/posts/tag/${tag}/page/1`} key={index}>
+                <span className="text-sm bg-blue-500 rounded-full px-3 py-1 font-medium">
                   {tag}
                 </span>
               </Link>
